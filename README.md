@@ -25,8 +25,8 @@ Site temático de VALORANT, desenvolvido como atividade acadêmica da disciplina
 
 ## 01 — Interface
 
-- [ ] `1-1` Criar a regra CSS pra classe `.button-menu` com visual de botão.
-- [ ] `1-2` Estilizar e organizar o conteúdo do `<footer>`.
+- [x] `1-1` Criar a regra CSS pra classe `.button-menu` com visual de botão.
+- [x] `1-2` Estilizar e organizar o conteúdo do `<footer>`.
 - [x] `1-3` Fazer o Header e estilizar.
 - [ ] `1-4` Fixar o Header no topo da tela permanente.
 - [x] `1-5` Fazer o Hero banner.
@@ -36,8 +36,8 @@ Site temático de VALORANT, desenvolvido como atividade acadêmica da disciplina
 **Estrutura e aparência**
 
 - [x] `2-1` Criar a estrutura HTML dos cards.
-- [ ] `2-2` Desenvolver a estilização CSS dos cards.
-- [ ] `2-3` Organizar as informações de cada agente.
+- [x] `2-2` Desenvolver a estilização CSS dos cards.
+- [x] `2-3` Organizar as informações de cada agente.
 
 **Conteúdo**
 
