@@ -28,7 +28,7 @@ Site temático de VALORANT, desenvolvido como atividade acadêmica da disciplina
 - [x] `1-1` Criar a regra CSS pra classe `.button-menu` com visual de botão.
 - [x] `1-2` Estilizar e organizar o conteúdo do `<footer>`.
 - [x] `1-3` Fazer o Header e estilizar.
-- [ ] `1-4` Fixar o Header no topo da tela permanente.
+- [x] `1-4` Fixar o Header no topo da tela permanente.
 - [x] `1-5` Fazer o Hero banner.
 
 ## 02 — Cards dos agentes
