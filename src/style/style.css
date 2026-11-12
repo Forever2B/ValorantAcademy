@@ -66,12 +66,16 @@ ul, ol {
 
 header {
     display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     flex-wrap: wrap;
     padding: 20px;
     min-height: 100px;
     align-items: center;
     justify-content: space-between;
-
+    position: fixed;
     background-color: var(--colorBackground01);
 
     border-bottom: 1px solid var(--colorDetails);
