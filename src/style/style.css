@@ -1,19 +1,23 @@
-/* Variáveis */
+
+
+
 :root {
     --colorPrimary: #FF4655;
     --colorPrimaryHover: #E12D3A;
+
     --colorBackground01: #0F1219;
     --colorBackground02: #1A1F26;
     --colorDetails: #2A3138;
+
     --colorText01: #F9FAFB;
     --colorText02: #9CA3AF;
+
     --color01: #00E6C3;
     --color02: #4AA3FF;
     --color03: #FFC857;
 }
 
 
-/* --------------------------------------- */
 
 * {
     margin: 0;
@@ -21,160 +25,326 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--colorBackground01);
+    color: var(--colorText01);
+    font-family: Arial, sans-serif;
+    min-height: 100%;
+}
+
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul, ol {
     list-style: none;
 }
 
+
+
 @font-face {
     font-family: "VAVAfont";
-    src: url("../assets/fonts/Valorant\ Font.ttf");
+    src: url("../assets/fonts/Valorant Font.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
 
-body {
-    background-color: var(--colorBackground01) ;
-height: 100%;
-}
+
 .container {
-    display:  flex;
+    display: flex;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 
-
 header {
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
-    max-height: 20vh;
+    min-height: 100px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    background-color: var(--colorBackground01);
+
     border-bottom: 1px solid var(--colorDetails);
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        img {
-            height: 65px;
-        }
-        h1 {
-            font-family: "VAVAfont";
-            color: var(--colorPrimaryHover);
-            text-align: center;
-            position: relative;
-            font-size: 35px;
-            top: 8px;
-        }
-    }
-    ul {   /* LISTA */
-        display: flex;
-           gap: 30px;
-           list-style: none;
-           padding: 0;
-           margin: 0;
-    }
 }
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    height: 65px;
+    object-fit: contain;
+}
+
+header h1 {
+    font-family: "VAVAfont", Arial, sans-serif;
+    color: var(--colorPrimaryHover);
+    text-align: center;
+    font-size: 35px;
+    position: relative;
+    top: 8px;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.button-menu {
+    color: var(--colorText01);
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.button-menu:hover {
+    color: var(--colorPrimary);
+}
+
 
 
 .hero {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     margin-bottom: 20vh;
 
-    background-image: url("/src/assets/banners/Herobanner.webp"); /* IMAGEM PHX_JTT */
+    background-image: url("/src/assets/banners/Herobanner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-    border-bottom: 1px solid var(--colorDetails);
 
-    img {
-        height: 40vh;
-        position: absolute;
-        transform: translate(58vw, 25vh);
-    }
+    position: relative;
+
+    border-bottom: 1px solid var(--colorDetails);
 }
 
 .hero div {
-        content: "";
-           top: 0;
-           left: 0;
+    width: 100%;
+    min-height: 100vh;
 
-           width: 100%;
-           height: 100%;
-           background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 40px 8%;
+
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
+.hero img {
+    max-width: 45%;
+    max-height: 40vh;
+    object-fit: contain;
+}
+
+
 .principal_content {
-    height: 100%;
     width: 100%;
     padding: 50px;
 }
 
-
-.card img {
-    width: 10vh;
-    height: 10vh;
-    object-fit: cover;
-    border-radius: 8px;
+.principal_content h2 {
+    color: var(--colorText01);
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-family: "VAVAfont", Arial, sans-serif;
 }
 
-/* Organização dos cards */
+.principal_content > h3 {
+    color: var(--colorPrimary);
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--colorDetails);
+    padding-bottom: 10px;
+}
+
+
 .Duelistas,
 .Iniciadores,
 .Controladores,
 .Sentinelas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
-    gap: 8px;
+    gap: 20px;
     margin-bottom: 40px;
 }
 
-/* Estilo dos cards */
+
 .card {
-    width: 220px;
-    padding: 15px;
-    background-color: #1a1a24;
+    padding: 20px;
+
+    background-color: var(--colorBackground02);
+
+    border: 1px solid var(--colorDetails);
     border-radius: 10px;
-    box-sizing: border-box;
+
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Imagem do agente */
-.card-img {
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--colorPrimary);
+    box-shadow: 0 5px 20px rgba(255, 70, 85, 0.15);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.card .card-img {
     width: 100%;
     height: 180px;
+
     object-fit: contain;
+
     border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+.card-body > h3 {
+    color: var(--colorText01);
+    font-family: "VAVAfont", Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.agente-function,
+.functions_division {
+    color: var(--colorPrimary) !important;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card-info {
+    color: var(--colorText02);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.habilidades {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.habilidades li {
+    background-color: var(--colorBackground01);
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border-left: 3px solid var(--colorPrimary);
 }
 
 /* Imagens das habilidades */
+
 .habilidades img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+
     object-fit: contain;
+
+    margin-bottom: 8px;
 }
 
-.card p {
-    color: #d1d1d1;
+/* Nomes das habilidades */
+
+.habilidades li h4 {
+    color: var(--colorText01);
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
-.card p strong {
-    color: #ffffff;
+/* Descrições das habilidades */
+
+.habilidades li p {
+    color: var(--colorText01);
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.dicas-title {
+    color: var(--colorText02);
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.agents-tips {
+    border-radius: 8px;
+    background-color: var(--colorBackground02);
+    gap: 20px;
+
+    li {
+        margin-bottom: 20px;
+    }
 }
 
-.card h3 {
-    color: #8B0000;
+.dicas-title strong {
+    color: var(--colorPrimary);
+}
+
+footer {
+    background-color: var(--colorBackground02);
+
+    border-top: 1px solid var(--colorDetails);
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: var(--colorText02);
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer strong {
+    color: var(--colorPrimary);
+    font-size: 18px;
+}
+
+.desenvolvedores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.desenvolvedores li {
+    color: var(--colorText01);
 }
